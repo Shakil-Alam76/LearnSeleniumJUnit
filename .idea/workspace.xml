@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cba3d01d-153a-4e4c-b3f5-b0f786326cd0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSeleniumJUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSeleniumJUnit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +17,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,14 +49,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Automation/Learning Project/LearnSeleniumJUnit",
+    "last_opened_file_path": "E:/Automation/LearningProject/LearnSeleniumJUnit",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.TestSeleniumJUnit.datePicker2">
-    <configuration name="TestSeleniumJUnit.datePicker2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.TestSeleniumJUnit.webTable">
+    <configuration name="TestSeleniumJUnit.handleAlert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -59,7 +71,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestSeleniumJUnit.datePicker2&quot;" />
+            <option value="&quot;TestSeleniumJUnit.handleAlert&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -69,7 +81,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestSeleniumJUnit.getTitle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestSeleniumJUnit.handleTab" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -82,7 +94,76 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestSeleniumJUnit.getTitle&quot;" />
+            <option value="&quot;TestSeleniumJUnit.handleTab&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSeleniumJUnit.modalDialog (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TestSeleniumJUnit.modalDialog&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSeleniumJUnit.webTable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TestSeleniumJUnit.webTable&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSeleniumJUnit.windowHandle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TestSeleniumJUnit.windowHandle&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -94,8 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TestSeleniumJUnit.datePicker2" />
-        <item itemvalue="Gradle.TestSeleniumJUnit.getTitle" />
+        <item itemvalue="Gradle.TestSeleniumJUnit.webTable" />
+        <item itemvalue="Gradle.TestSeleniumJUnit.modalDialog (1)" />
+        <item itemvalue="Gradle.TestSeleniumJUnit.windowHandle" />
+        <item itemvalue="Gradle.TestSeleniumJUnit.handleTab" />
+        <item itemvalue="Gradle.TestSeleniumJUnit.handleAlert" />
       </list>
     </recent_temporary>
   </component>
@@ -109,6 +193,7 @@
       <updated>1659338170571</updated>
       <workItem from="1659338172130" duration="11156000" />
       <workItem from="1660479227531" duration="1074000" />
+      <workItem from="1660490082576" duration="6255000" />
     </task>
     <servers />
   </component>

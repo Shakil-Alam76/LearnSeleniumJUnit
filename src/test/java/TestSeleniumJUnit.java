@@ -16,7 +16,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import static java.lang.Thread.sleep;
@@ -149,9 +151,68 @@ public class TestSeleniumJUnit {
           driver.switchTo().window(tab.get(0));
       }
 
-      // git clone and run at office pc
 
 
+      // Multiple Window Handle
+      @Test
+      public void windowHandle(){
+        driver.get("https://demoqa.com/browser-windows");
+        driver.findElement(By.id("windowButton")).click();
+        WebDriverWait wait=new WebDriverWait(driver,30);
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("windowButton")));
+        String mainwindowHandle=driver.getWindowHandle();
+        Set<String> allWindowHandels=driver.getWindowHandles();
+          Iterator<String> iterator=allWindowHandels.iterator();
+
+          while (iterator.hasNext()){
+              String childWindow=iterator.next();
+              if(!mainwindowHandle.equalsIgnoreCase(childWindow)){
+                  driver.switchTo().window(childWindow);
+                  String text=driver.findElement(By.id("sampleHeading")).getText();
+                  Assertions.assertTrue(text.contains("This is a sample page"));
+
+              }
+          }
+      }
+
+      // Modal Dialog
+      @Test
+public void modalDialog() throws InterruptedException {
+        driver.get("https://demoqa.com/modal-dialogs");
+        //Small modal
+
+       // WebElement element=wait.until(ExpectedConditions.elementToBeClickable(By.id("showSmallModal")));
+       // element.click();
+          driver.findElement(By.id("showSmallModal")).click();
+          sleep(10000);
+         driver.findElement(By.id("closeSmallModal")).click();
+
+         //Large modal
+          driver.findElement(By.id("showLargeModal")).click();
+          sleep(10000);
+          driver.findElement(By.id("closeLargeModal")).click();
+}
+
+
+// WebTable data edit and assertions
+@Test
+ public void webTable(){
+        driver.get("https://demoqa.com/webtables");
+        driver.findElement(By.xpath("//span[@id='edit-record-1']")).click();
+        driver.findElement(By.xpath("//input[@id='firstName']")).clear();
+     driver.findElement(By.xpath("//input[@id='firstName']")).sendKeys("Shakil Alam");
+
+     driver.findElement(By.xpath("//input[@id='lastName']")).click();
+     driver.findElement(By.xpath("//input[@id='lastName']")).clear();
+     driver.findElement(By.xpath("//input[@id='lastName']")).sendKeys("Shanto");
+
+     driver.findElement(By.id("submit")).click();
+    String firstName= driver.findElement(By.xpath("//div[contains(text(),'Shakil Alam')]")).getText();
+     String secondName= driver.findElement(By.xpath("//div[contains(text(),'Shanto')]")).getText();
+
+     Assertions.assertTrue(firstName.contains("Shakil Alam"));
+     Assertions.assertTrue(secondName.contains("Shanto"));
+ }
 
 @AfterAll
     public static void finishTest(){
