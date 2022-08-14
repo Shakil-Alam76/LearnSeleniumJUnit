@@ -149,6 +149,8 @@ public class TestSeleniumJUnit {
           driver.switchTo().window(tab.get(0));
       }
 
+      // git clone and run at office pc
+
 
 
 @AfterAll
