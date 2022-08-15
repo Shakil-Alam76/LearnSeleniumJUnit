@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cba3d01d-153a-4e4c-b3f5-b0f786326cd0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestSeleniumJUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSeleniumJUnit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +26,17 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LearnSeleniumJUnit" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -47,18 +59,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Automation/LearningProject/LearnSeleniumJUnit",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Automation/LearningProject/LearnSeleniumJUnit&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Gradle.TestSeleniumJUnit.webTable">
-    <configuration name="TestSeleniumJUnit.handleAlert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+}</component>
+  <component name="RunManager" selected="Gradle.TestSeleniumJUnit.takeScreenshot">
+    <configuration name="TestSeleniumJUnit.googleImageSearch" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -71,7 +83,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestSeleniumJUnit.handleAlert&quot;" />
+            <option value="&quot;TestSeleniumJUnit.googleImageSearch&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -81,7 +93,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestSeleniumJUnit.handleTab" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestSeleniumJUnit.iFrame" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -94,7 +106,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestSeleniumJUnit.handleTab&quot;" />
+            <option value="&quot;TestSeleniumJUnit.iFrame&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -104,7 +116,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestSeleniumJUnit.modalDialog (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestSeleniumJUnit.keyBoardEvent (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -117,7 +129,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestSeleniumJUnit.modalDialog&quot;" />
+            <option value="&quot;TestSeleniumJUnit.keyBoardEvent&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -127,7 +139,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestSeleniumJUnit.webTable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestSeleniumJUnit.mouseHovering" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -140,7 +152,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestSeleniumJUnit.webTable&quot;" />
+            <option value="&quot;TestSeleniumJUnit.mouseHovering&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -150,7 +162,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestSeleniumJUnit.windowHandle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestSeleniumJUnit.takeScreenshot" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -163,7 +175,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestSeleniumJUnit.windowHandle&quot;" />
+            <option value="&quot;TestSeleniumJUnit.takeScreenshot&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -175,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TestSeleniumJUnit.webTable" />
-        <item itemvalue="Gradle.TestSeleniumJUnit.modalDialog (1)" />
-        <item itemvalue="Gradle.TestSeleniumJUnit.windowHandle" />
-        <item itemvalue="Gradle.TestSeleniumJUnit.handleTab" />
-        <item itemvalue="Gradle.TestSeleniumJUnit.handleAlert" />
+        <item itemvalue="Gradle.TestSeleniumJUnit.takeScreenshot" />
+        <item itemvalue="Gradle.TestSeleniumJUnit.keyBoardEvent (1)" />
+        <item itemvalue="Gradle.TestSeleniumJUnit.mouseHovering" />
+        <item itemvalue="Gradle.TestSeleniumJUnit.iFrame" />
+        <item itemvalue="Gradle.TestSeleniumJUnit.googleImageSearch" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +205,8 @@
       <updated>1659338170571</updated>
       <workItem from="1659338172130" duration="11156000" />
       <workItem from="1660479227531" duration="1074000" />
-      <workItem from="1660490082576" duration="6255000" />
+      <workItem from="1660490082576" duration="6577000" />
+      <workItem from="1660539927831" duration="17278000" />
     </task>
     <servers />
   </component>

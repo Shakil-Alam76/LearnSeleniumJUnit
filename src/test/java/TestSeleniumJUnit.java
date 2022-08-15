@@ -1,24 +1,23 @@
+import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.KeyInput;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import static java.lang.Thread.sleep;
@@ -213,6 +212,108 @@ public void modalDialog() throws InterruptedException {
      Assertions.assertTrue(firstName.contains("Shakil Alam"));
      Assertions.assertTrue(secondName.contains("Shanto"));
  }
+
+  // Scrap Data from Table
+ @Test
+ public void scrapData(){
+        driver.get("https://demoqa.com/webtables");
+        WebElement table=driver.findElement(By.className("rt-tbody"));
+        List<WebElement> allRows=table.findElements(By.className("rt-tr"));
+        int i=0;
+        for(WebElement row:allRows){
+            List<WebElement>cells=row.findElements(By.className("rt-td"));
+            for(WebElement cell:cells){
+                i++;
+                System.out.println("Num("+i+")"+cell.getText());
+            }
+        }
+ }
+
+ // Upload Image
+ @Test
+        public void uploadImage(){
+          driver.get("https://demoqa.com/upload-download");
+         WebElement upload= driver.findElement(By.id("uploadFile"));
+         //upload.click();
+         upload.sendKeys("C:\\Users\\Shanto\\Pictures\\demoqa.PNG");
+         String text=driver.findElement(By.id("uploadedFilePath")).getText();
+         Assertions.assertTrue(text.contains("demoqa.PNG"));
+        }
+
+        //Google image search
+/*
+     public void googleImageSearch() throws InterruptedException {
+        driver.get("https://images.google.com/");
+         Actions action=new Actions(driver);
+         List<WebElement> id=driver.findElements(By.cssSelector("button"));
+        action.click(id.get(4)).perform();
+         sleep(5000);
+
+       // driver.findElement(By.xpath("//span[contains(text(),'Upload an image')]")).click();
+       // driver.findElement(By.xpath("//input[@id='awyMjb']")).sendKeys("C:\\\\Users\\\\Shanto\\\\Pictures\\\\demoqa.PNG");
+    }
+
+*/
+
+
+    // IFrame Handle
+    @Test
+    public void iFrame(){
+        driver.get("https://demoqa.com/frames");
+       driver.switchTo().frame("frame2");
+       String text=driver.findElement(By.id("sampleHeading")).getText();
+       Assertions.assertTrue(text.contains("This is a sample page"));
+       driver.switchTo().defaultContent();
+    }
+
+
+    // Mouse Hover
+@Test
+    public void mouseHovering() throws InterruptedException {
+        driver.get("https://seu.edu.bd/");
+        Actions action=new Actions(driver);
+        WebElement mainMenu=driver.findElement(By.xpath("//a[contains(text(),'Academics')]"));
+        action.moveToElement(mainMenu).perform();
+        Thread.sleep(5000);
+        WebElement submenu=driver.findElement(By.xpath("//a[contains(text(),'School of Science & Engineering')]"));
+        action.moveToElement(submenu).perform();
+        submenu.click();
+    }
+
+
+    // Keyboard Event
+    @Test
+    public void keyBoardEvent(){
+        driver.get("https://demoqa.com/automation-practice-form");
+       WebElement textbox= driver.findElement(By.id("firstName"));
+        Actions action =new Actions(driver);
+        action.click(textbox).perform();
+        action.keyDown(Keys.SHIFT)
+                .sendKeys("Shakil Alam")
+                .keyUp(Keys.SHIFT)
+                .doubleClick()
+                .contextClick()
+                .sendKeys(Keys.ENTER)
+               .perform();
+    }
+
+    // Take Screenshot
+    @Test
+    public void takeScreenshot() throws IOException {
+    driver.get("https://demoqa.com");
+    File screenshotFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+    String time =new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss-aa").format(new Date());
+    String fileWithPath= "./src/test/resources/screenshots/"+time+".png";
+    File DestFile=new File(fileWithPath);
+        FileUtils.copyFile(screenshotFile,DestFile);
+    }
+
+    // Read From Excel
+    @Test
+    public void readExcelFile() throws IOException {
+  String filePath="./sec/test/resources";
+  Utils.readFromExcl(filePath,"SampleExcelFile.xls", "Sheet_1" );
+    }
 
 @AfterAll
     public static void finishTest(){
